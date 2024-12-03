@@ -26,7 +26,7 @@ public class StandAloneTest {
 		driver.get("https://rahulshettyacademy.com/client");
 		driver.manage().window().maximize();
 
-		driver.findElement(By.xpath("/html//input[@id='userEmail']")).sendKeys("anshika@gmail.com");
+	//Comment	driver.findElement(By.xpath("/html//input[@id='userEmail']")).sendKeys("anshika@gmail.com");
 		driver.findElement(By.xpath("/html//input[@id='userPassword']")).sendKeys("Iamking@000");
 		driver.findElement(By.xpath("/html//input[@id='login']")).click();
 
