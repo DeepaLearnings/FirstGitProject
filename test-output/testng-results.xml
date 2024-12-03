@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-28T13:35:54 IST" name="Suite" finished-at="2024-11-28T13:36:09 IST" duration-ms="15497">
+    <groups>
+    </groups>
+    <test started-at="2024-11-28T13:35:54 IST" name="Test" finished-at="2024-11-28T13:36:09 IST" duration-ms="15497">
+      <class name="DeepaLearnings.StandAloneTest">
+        <test-method signature="MyTest()[pri:0, instance:DeepaLearnings.StandAloneTest@1d2adfbe]" started-at="2024-11-28T13:35:54 IST" name="MyTest" finished-at="2024-11-28T13:36:09 IST" duration-ms="15451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MyTest -->
+      </class> <!-- DeepaLearnings.StandAloneTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
