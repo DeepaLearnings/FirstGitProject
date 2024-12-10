@@ -1,4 +1,4 @@
-package DeepaLearnings;
+package DeepaLearnings.Tests;
 
 import java.time.Duration;
 import java.util.List;
@@ -26,8 +26,8 @@ public class StandAloneTest {
 		driver.get("https://rahulshettyacademy.com/client");
 		driver.manage().window().maximize();
 
-	//Comment	driver.findElement(By.xpath("/html//input[@id='userEmail']")).sendKeys("anshika@gmail.com");
-		driver.findElement(By.xpath("/html//input[@id='userPassword']")).sendKeys("Iamking@000");
+		driver.findElement(By.xpath("/html//input[@id='userEmail']")).sendKeys("Hemansh@gmail.com");
+		driver.findElement(By.xpath("/html//input[@id='userPassword']")).sendKeys("Kavya@1234");
 		driver.findElement(By.xpath("/html//input[@id='login']")).click();
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -39,9 +39,9 @@ public class StandAloneTest {
 				.orElse(null);
 		prod.findElement(By.cssSelector(".card-body button:last-of-type")).click();
 
-		 wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#toast-container")));
 
-		 wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
+		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
@@ -57,10 +57,13 @@ public class StandAloneTest {
 		}
 		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
 
-		Boolean match = cartProducts.stream().anyMatch(cartProduct->cartProduct.getText().equalsIgnoreCase(productName));
-		
+		Boolean match = cartProducts.stream()
+				.anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
+
 		Assert.assertTrue(match);
-		driver.findElement(By.xpath("//app-root/app-profile[@class='ng-star-inserted']/div/div[@class='cart']/ul[@class='cartWrap ng-star-inserted']//button[@class='btn btn-primary']")).click();
+		driver.findElement(By.xpath(
+				"//app-root/app-profile[@class='ng-star-inserted']/div/div[@class='cart']/ul[@class='cartWrap ng-star-inserted']//button[@class='btn btn-primary']"))
+				.click();
 
 		Actions a = new Actions(driver);
 		a.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "india").build().perform();
