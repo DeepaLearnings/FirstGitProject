@@ -17,4 +17,6 @@ public class ExtendReportsNG {
 		extent.setSystemInfo("Tester Name: ", "Deepa");
 		return extent;
 	}
+	
+	 
 }

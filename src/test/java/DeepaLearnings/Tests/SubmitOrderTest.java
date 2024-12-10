@@ -42,7 +42,7 @@ public class SubmitOrderTest extends Base {
 	@Test(dependsOnMethods = { "submitOrder" })
 	public void checkOrders() {
 		LandingPage landingPage = new LandingPage(driver);
-		ProductCatalogPage productCatalogPage = landingPage.launchInitialPage("anshika@gmail.com", "Iamking@000");
+		ProductCatalogPage productCatalogPage = landingPage.launchInitialPage("Hemansh@gmail.com", "Kavya@1234");
 		CheckOrderPage checkOrderPage= productCatalogPage.checkOrder();
 		Assert.assertTrue(checkOrderPage.verifyProduct("ZARA COAT 3"));
 		

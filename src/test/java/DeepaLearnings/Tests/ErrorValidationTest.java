@@ -54,7 +54,7 @@ public class ErrorValidationTest extends Base {
 	public Object[][] ProductValidationTest_Data() throws IOException
 
 	{
-		return new Object[][] { { "Hemansh@gmail.com", "Kavya@1234", "ZARA COAT 3", "ZARA COAT 3" } };
+		return new Object[][] { { "Hemansh@gmail.com", "Kavya@1234", "ZARA COAT 3", "ZARA COAT 33" } };
 
 	}
 

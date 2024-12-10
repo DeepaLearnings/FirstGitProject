@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 09 16:19:16 IST 2024</td>
+<td>Started on:</td><td>Tue Dec 10 15:25:47 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14023 ms)</td>
+<tr><td>Total time:</td><td>38 seconds (38610 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,35 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='DeepaLearnings_Tests.ErrorValidationTest.ProductValidationTest()'><b>ProductValidationTest</b><br>Test class: DeepaLearnings_Tests.ErrorValidationTest<br>Parameters: Hemansh@gmail.com, Kavya@1234, ZARA COAT 33, ZARA COAT 33</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)&quot; because &quot;product&quot; is null
-	at DeepaLearnings_PageObjects.ProductCatalogPage.addProductToCart(ProductCatalogPage.java:37)
-	at DeepaLearnings_Tests.ErrorValidationTest.ProductValidationTest(ErrorValidationTest.java:33)
+<td title='DeepaLearnings.Tests.ErrorValidationTest.ProductValidationTest()'><b>ProductValidationTest</b><br>Test class: DeepaLearnings.Tests.ErrorValidationTest<br>Parameters: Hemansh@gmail.com, Kavya@1234, ZARA COAT 3, ZARA COAT 33</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .cartSection h3 (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\DEEPAG~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49774}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49774/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 147f1673bfad06c942ac98cd3e9eb48e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at DeepaLearnings.PageObjects.BasePage.waitForElementToAppear(BasePage.java:48)
+	at DeepaLearnings.PageObjects.OrderPage.checkProduct(OrderPage.java:20)
+	at DeepaLearnings.Tests.ErrorValidationTest.ProductValidationTest(ErrorValidationTest.java:35)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1273012861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1273012861'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)&quot; because &quot;product&quot; is null
-	at DeepaLearnings_PageObjects.ProductCatalogPage.addProductToCart(ProductCatalogPage.java:37)
-	at DeepaLearnings_Tests.ErrorValidationTest.ProductValidationTest(ErrorValidationTest.java:33)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1070353156", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1070353156'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: .cartSection h3 (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\DEEPAG~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49774}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49774/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 147f1673bfad06c942ac98cd3e9eb48e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at DeepaLearnings.PageObjects.BasePage.waitForElementToAppear(BasePage.java:48)
+	at DeepaLearnings.PageObjects.OrderPage.checkProduct(OrderPage.java:20)
+	at DeepaLearnings.Tests.ErrorValidationTest.ProductValidationTest(ErrorValidationTest.java:35)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -99,21 +119,15 @@ function toggleAllBoxes() {
 	at org.testng.TestRunner.privateRun(TestRunner.java:739)
 	at org.testng.TestRunner.run(TestRunner.java:614)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
-<td>5</td>
-<td>DeepaLearnings_Tests.ErrorValidationTest@51bd8b5c</td></tr>
+<td>25</td>
+<td>DeepaLearnings.Tests.ErrorValidationTest@7b50df34</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -124,10 +138,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='DeepaLearnings_Tests.ErrorValidationTest.LoginValidationTest()'><b>LoginValidationTest</b><br>Test class: DeepaLearnings_Tests.ErrorValidationTest<br>Parameters: {password=Kavya@123, email=Hemansh@gmail.com}</td>
+<td title='DeepaLearnings.Tests.ErrorValidationTest.LoginValidationTest()'><b>LoginValidationTest</b><br>Test class: DeepaLearnings.Tests.ErrorValidationTest<br>Parameters: {password=Kavya@123, email=Hemansh@gmail.com}</td>
 <td></td>
-<td>2</td>
-<td>DeepaLearnings_Tests.ErrorValidationTest@51bd8b5c</td></tr>
+<td>5</td>
+<td>DeepaLearnings.Tests.ErrorValidationTest@7b50df34</td></tr>
 </table><p>
 </body>
 </html>

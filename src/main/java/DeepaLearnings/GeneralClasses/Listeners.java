@@ -2,7 +2,6 @@ package DeepaLearnings.GeneralClasses;
 
 import java.io.IOException;
 
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -15,21 +14,21 @@ import com.aventstack.extentreports.Status;
 public class Listeners extends Base implements ITestListener {
 
 	ExtentTest test;
-	
-	ExtentReports extent=ExtendReportsNG.getExtentReports();
-	
+	ExtentReports extent = ExtendReportsNG.getExtentReports();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		
+
 		test = extent.createTest(result.getMethod().getMethodName());
 		extentTest.set(test);
+
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		extentTest.get().log(Status.PASS, "Test Passed");
+
 	}
 
 	@Override
@@ -38,23 +37,21 @@ public class Listeners extends Base implements ITestListener {
 
 		try {
 			driver = (WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
-			System.out.println("try block ");
-			
+
 		} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e) {
-			System.out.println("catch error ");
+
 			e.printStackTrace();
 		}
-		
-		String filePath=null;
+
+		String filePath = null;
 
 		try {
-			filePath= getScreenshot(result.getMethod().getMethodName(),driver);
+			filePath = getScreenshot(result.getMethod().getMethodName(), driver);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		extentTest.get().addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
-		
 
 	}
 
